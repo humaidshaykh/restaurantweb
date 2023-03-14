@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants Website</title>
+    <!-- bootstrap css cdn link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- fontawesome css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        overflow-x: hidden !important;
+    }
+    section{
+        height: 100vh;
+    }
+    a{
+        text-decoration: none;
+        /* font-family: 'Montserrat', sans-serif; */
+    }
+    h1{
+        font-size: 62px;
+    }
+    /* navbar------------------------------------------------
+    ------------------------------------------------start */
+    .main{
+        background: url(images/banner.jpg);
+	    background-repeat: no-repeat;
+	    background-size: cover;
+    }
+    .nav-header{
+        z-index: 200;
+    }
+    .nav-items{
+        height: 8vh;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        transition: all 0.5s;
+        z-index: 1000;
+    }
+    .logo{
+        font-size: 25px;
+        color: white;
+        font-weight: 400;
+    }
+    .logo h6{
+        margin-left: 8px;
+    }
+    .logo i{
+        font-size: 20px;
+    }
+    .nav-links a{
+        color: white;
+        font-size: 16px;
+        margin-left: 40px;
+    }
+    .head-content{
+        position: absolute;
+        top: 50%;
+        transform: translate(-0%,-50%);
+    }
+    .head-content h1{
+        color: #FFCC00;
+    }
+    .order-btn{
+        background-color: #FFCC00;
+        color: black;
+        border: none;
+        font-weight: 500;
+        padding: 8px 16px;
+    }
+    .nav-items.sticky{
+        background-color: rgba(255,255,255,1);
+    }
+    .nav-items.sticky a{
+        color: black;
+    }
+    .nav-items.sticky i{
+        color: black;
+    }
+    .nav-items.sticky h6{
+        color: black;
+    }
+    .mobile-navbar-btn{
+        display: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 23px;
+    }   
+    .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]{
+        display: none;
+    }
+    /* navbar------------------------------------------------
+    ------------------------------------------------end */
+
+
+    /* center work------------------------------------------------
+    ------------------------------------------------start */
+
+    /* background image section 1 */
+    .wpo-page-title{
+	    background: url(images/bottom-bg.png) no-repeat top/cover;
+        position: relative;
+        display: flex;
+	    text-align: center;
+        justify-content: center;
+        flex-direction: column;
+	    color: #fff;
+        z-index: 1;
+    }
+
+    /* background image section 2 */
+    .wpo-page-title-2{
+	    background: url(images/background-veg.png) no-repeat top/cover;
+        height: 650px;
+        min-height: 360px;
+        position: relative;
+        display: flex;
+	    text-align: center;
+        justify-content: center;
+        flex-direction: column;
+	    color: #fff;
+        z-index: 1;
+    }
+   .graph{
+        border: 3px solid white;
+        border-radius: 100%;
+        margin: auto;
+        width: fit-content;
+        padding: 30px;
+    }
+
+    /* background image section 3 */
+    .wpo-page-title-3{
+	    background: url(images/bottom-bg-end.png) no-repeat top/cover;
+        position: relative;
+        display: flex;
+	    text-align: center;
+        justify-content: center;
+        flex-direction: column;
+	    color: #fff;
+        z-index: 1;
+    }
+
+    /* center work------------------------------------------------
+    ------------------------------------------------end */
+
+
+    /* yellow bg and Subscribe-----------------------------------
+    ------------------------------------------------start */
+
+    /* background image section 4 */
+    .wpo-page-title-4{
+	    background: url(images/yellow-bg.png) no-repeat top/cover;
+        min-height: 600px;
+        position: relative;
+        display: flex;
+	    text-align: center;
+        justify-content: center;
+        flex-direction: column;
+	    color: #fff;
+        z-index: 1;
+    }
+
+    /* background image section 5 */
+    .wpo-page-title-5{
+	    background: url(images/subscribe-bg.png) no-repeat top/cover;
+        min-height: 620px;
+        position: relative;
+        display: flex;
+	    text-align: center;
+        justify-content: center;
+        flex-direction: column;
+	    color: #fff;
+        z-index: 1;
+    }
+
+    .input-group input:focus{
+        box-shadow: none;
+    }
+
+   /* yellow bg and Subscribe--------------------------------
+    ------------------------------------------------end */
+
+
+    /* footer---------------------------------------------
+    ------------------------------------------------start */
+
+   .footer{
+        background-color: #333333;
+        padding: 120px 0px;
+    }
+    .icons i{
+        background-color: white;
+        color: #333333;
+        padding: 7px;
+        border-radius: 100%;
+        margin: 2px;
+    }
+
+    /* footer-----------------------------------------
+    ------------------------------------------------end */
+
+    @media (max-width: 970px){
+        .nav-header{
+            position: relative;
+        }
+        .mobile-navbar-btn{
+            display: block;
+            z-index: 10000;
+            color: white;
+        }
+        .nav-links{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to bottom right, #333333, #5e5e5e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform: translateX(100%);
+            transition: all 0.5s linear;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            z-index: 9999;
+        }
+        .nav-list a{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 16px 0px;
+        }
+        .active .nav-links{
+            transform: translateX(0%);
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"]{
+            display: none;
+        }
+        .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]{
+            display: block;
+        }
+        }
+    @media (max-width: 768px){
+        .reverse-content{
+            flex-direction: column-reverse;
+        }
+        .wpo-page-title-4{
+        min-height: 320px;
+        }
+        .wpo-page-title-5{
+	        background: url(images/subscribe-bg.png) no-repeat top/cover;
+            min-height: 320px;
+        }
+    }
+    @media (max-width: 576px){
+        h1{
+        font-size: 45px;
+        }
+        .br-none{
+            display: none;
+        }
+    }
+</style>
+<body>
+    <!-- navbar------------------------------------------------ -->
+    <!-- ------------------------------------------------start -->
+
+    <section class="main">
+        <header class="nav-header">
+            <nav class="nav-items">
+                <div class="logo d-flex">
+                    <i class="fa-solid fa-utensils"></i>
+                    <h6>Logo Here</h6>
+                </div>
+
+                <div class="nav-links">
+                <div class="nav-list">
+                <a href="">Home</a>
+                <a href="">Product</a>
+                <a href="">Promo</a>
+                <a href="">About</a>
+                <a href="">Contact</a>
+                <a href=""><i class="fa fa-search"></i></a>
+                </div>
+                </div>
+                <div class="mobile-navbar-btn">
+                    <i name="menu-outline" class="fa-solid fa-bars mobile-nav-icon"></i>
+                    <i name="close-outline" class="fa-solid fa-xmark mobile-nav-icon"></i>
+                </div>
+            </nav>
+        </header>
+
+        <div class="head-content">
+            <div class="row">
+                <div class="col-0 col-sm-0 col-md-6 col-lg-6 col-xl-6"></div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 p-3 p-sm-5 p-md-0 p-lg-0 p-xl-0">
+                    <h1 style="font-family: 'Grand Hotel', cursive;">Title Here</h1>
+                    <p class="py-2 text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque mollitia autem ipsum exercitationem maxime ea ullam laboriosam sapiente repudiandae id!</p>
+                    <a class="order-btn" href="">ORDER NOW</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- navbar------------------------------------------------ -->
+    <!-- ------------------------------------------------end -->
+
+
+    <!-- best seller------------------------------------------------ -->
+    <!-- ------------------------------------------------start -->
+
+<main>
+    <center><h1 class="mt-5" style="font-family: 'Grand Hotel', cursive;">Best Seller</h1></center>
+    <center><p class="my-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+        <br class="br-none"> lacinia odio vitae vestibulum vestibulum. </p></center>
+        <div class="container">
+            <div class="row my-5">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 text-center">
+                    <img class="img-fluid" width="200px" src="images/b1.png" alt="">
+                    <h2 class="pt-2" style="font-family: 'Grand Hotel', cursive;">Title Here</h2>
+                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 text-center">
+                    <img class="img-fluid" width="200px" src="images/b2.png" alt="">
+                    <h2 class="pt-2" style="font-family: 'Grand Hotel', cursive;">Title Here</h2>
+                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 text-center">
+                    <img class="img-fluid" width="200px" src="images/b3.png" alt="">
+                    <h2 class="pt-2" style="font-family: 'Grand Hotel', cursive;">Title Here</h2>
+                    <p>Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+</main>
+
+    <!-- best seller------------------------------------------------ -->
+    <!-- ------------------------------------------------end -->
+
+
+    <!-- center work------------------------------------------------ -->
+    <!-- ------------------------------------------------start -->
+
+	<!-- background image section 1 -->
+	<section class="wpo-page-title pb-5">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+                    <img class="img-fluid" width="250px" src="images/bottom-b1.png" alt="">
+                </div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 my-4 my-sm-4 my-md-0 my-lg-0 my-xl-0 text-center text-sm-center text-md-start text-lg-start text-xl-start">
+                    <h1 style="font-family: 'Grand Hotel', cursive;">Oriental Taste</h1>
+                    <p class="mb-4 mb-sm-4 mb-md-4 mb-lg-5 mb-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+                    <a class="order-btn" href="">ORDER NOW</a>
+                </div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- background image section 2 -->
+	<section class="wpo-page-title-2">
+        <center><h1 class="mt-5" style="font-family: 'Grand Hotel', cursive;">Statistics</h1></center>
+    <center><p class="my-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus<br class="br-none"> lacinia 
+        odio vitae vestibulum vestibulum. </p></center>
+		<div class="container">
+            <div class="row my-4 my-sm-4 my-md-5 my-lg-5 my-xl-5">
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <aside class="graph">
+                        <h3>123</h3>
+                        <h5>OUTLETS</h5>
+                    </aside>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3">
+                    <aside class="graph">
+                        <h3>123</h3>
+                        <h5>OUTLETS</h5>
+                    </aside>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 my-4 my-sm-4 my-md-0 my-lg-0 my-xl-0">
+                    <aside class="graph">
+                        <h3>123</h3>
+                        <h5>OUTLETS</h5>
+                    </aside>
+                </div>
+                <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 my-4 my-sm-4 my-md-5 my-lg-0 my-xl-0">
+                    <aside class="graph">
+                        <h3>123</h3>
+                        <h5>OUTLETS</h5>
+                    </aside>
+                </div>
+            </div>
+		</div>
+	</section>
+
+
+    	<!-- background image section 3 -->
+	<section class="wpo-page-title-3 pt-5">
+		<div class="container">
+			<div class="row align-items-center reverse-content">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 my-4 my-sm-4 my-md-0 my-lg-0 my-xl-0 text-center text-sm-center text-md-start text-lg-start text-xl-start">
+                    <h1 style="font-family: 'Grand Hotel', cursive;">Chicken Grill</h1>
+                    <p class="mb-4 mb-sm-4 mb-md-4 mb-lg-5 mb-xl-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. .</p>
+                    <a class="order-btn" href="">ORDER NOW</a>
+                </div>
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 text-center">
+                    <img class="img-fluid" width="250px" src="images/bottom-b2.png" alt="">
+                </div>
+			</div>
+		</div>
+	</section>
+
+    <!-- center work------------------------------------------------
+    ------------------------------------------------end -->
+
+
+    <!-- yellow bg and Subscribe--------------------------------
+    ------------------------------------------------start -->
+
+    <!-- background image section 4 -->
+	<div class="wpo-page-title-4 mt-5">
+        <center><p class="text-black h6 my-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            <br class="br-none"> lacinia odio vitae vestibulum vestibulum. </p></center>
+        <center><h1 class="text-black mt-3" style="font-family: 'Grand Hotel', cursive;">Lenora Fields</h1></center>		
+    </div>
+
+
+    <!-- background image section 5 -->
+    <div class="wpo-page-title-5">
+        <center><h1 class="text-black mt-3" style="font-family: 'Grand Hotel', cursive;">Subscribe</h1></center>	
+        <center><p class="text-black h6 my-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            <br class="br-none"> lacinia odio vitae vestibulum vestibulum. </p></center>
+            <div class="row mt-5">
+                <div class="col-1 col-sm-2 col-md-3 col-lg-3 col-xl-4"></div>
+                <div class="col-10 col-sm-8 col-md-6 col-lg-6 col-xl-4">
+                <div class="input-group">
+                    <input type="text" class="form-control border-0" placeholder="Your Email" aria-label="Text input with dropdown button">
+                    <button class="order-btn" type="button" aria-expanded="false">SUBSCRIBE</button>
+                </div>
+                </div>
+                <div class="col-1 col-sm-2 col-md-3 col-lg-3 col-xl-4"></div>
+        </div>
+    </div>
+
+    <!-- yellow bg and Subscribe--------------------------------
+    ------------------------------------------------end -->
+
+
+    <!-- footer---------------------------------------------
+    ------------------------------------------------start -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row px-5">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-4 my-0 my-sm-0 my-md-4 my-lg-0 my-xl-0">
+                    <h5 class="text-white fw-bold">TITLE HERE</h5>
+                    <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia 
+                    odio vitae vestibulum vestibulum.</p>
+                    <div class="icons">
+                        <a href="https://www.instagram.com/humaidshaykh_/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/humaidshaykh9"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/humaidshaykh"><i class="fa-brands fa-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-0 col-sm-0 col-md-0 col-lg-1 col-xl-2 my-0 my-sm-0 my-md-0 my-lg-0 my-xl-0"></div>
+                <div class="col-12 col-sm-5 col-md-4 col-lg-2 col-xl-2 my-3 my-sm-4 my-md-4 my-lg-0 my-xl-0">
+                    <h5 class="text-white fw-bold">ABOUT</h5>
+                    <ul class="list-unstyled text-white">
+                        <a href="" class="text-white"><li>History</li></a>
+                        <a href="" class="text-white"><li>Our Team</li></a>
+                        <a href="" class="text-white"><li>Brand Guidlines</li></a>
+                        <a href="" class="text-white"><li>Terms & Condition</li></a>
+                        <a href="" class="text-white"><li>Privicy Policy</li></a>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-5 col-md-4 col-lg-2 col-xl-2 my-2 my-sm-4 my-md-4 my-lg-0 my-xl-0">
+                    <h5 class="text-white fw-bold">SERVICES</h5>
+                    <ul class="list-unstyled text-white">
+                        <a href="" class="text-white"><li>How to Order</li></a>
+                        <a href="" class="text-white"><li>Our Product</li></a>
+                        <a href="" class="text-white"><li>Order Status</li></a>
+                        <a href="" class="text-white"><li>Promo</li></a>
+                        <a href="" class="text-white"><li>Payment Method</li></a>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-5 col-md-4 col-lg-2 col-xl-2 my-2 my-sm-4 my-md-4 my-lg-0 my-xl-0">
+                    <h5 class="text-white fw-bold">ABOUT</h5>
+                    <ul class="list-unstyled text-white">
+                        <a href="" class="text-white"><li>Contact Us</li></a>
+                        <a href="" class="text-white"><li>Help</li></a>
+                        <a href="" class="text-white"><li>Privacy</li></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- footer-------------------------------------------
+    ------------------------------------------------end -->
+
+
+    <!-- personal js link -->
+    <script src="js/javascript.js"></script>
+    <!-- bootstrap js cdn link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
